@@ -5,29 +5,28 @@ import java.util.UUID;
 
 public class Message implements Serializable {
 
-    private UUID id;
+    private String id;
     private String payload;
 
+    public Message(String id, String payload) {
+        this.id = id;
+        this.payload = payload;
+    }
+
+    public Message() { }
 
     public Message(String payload) {
         this.payload = payload;
-        this.id = UUID.randomUUID();
+        this.id = UUID.randomUUID().toString();
     }
 
-    public UUID getId() {
+    public String getId() {
         return id;
-    }
-
-    public void setId(UUID id) {
-        this.id = id;
     }
 
     public String getPayload() {
         return payload;
     }
 
-    public void setPayload(String payload) {
-        this.payload = payload;
-    }
 }
 
