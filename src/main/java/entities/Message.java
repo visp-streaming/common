@@ -28,5 +28,12 @@ public class Message implements Serializable {
         return payload;
     }
 
+    @Override
+    public String toString() {
+        return "Message{" +
+                "id='" + id + '\'' +
+                ", payload='" + payload + '\'' +
+                '}';
+    }
 }
 
