@@ -1,5 +1,7 @@
 package entities;
 
+import java.util.UUID;
+
 public class Speed {
     private String id;
     private String taxiId;
@@ -11,6 +13,12 @@ public class Speed {
     public Speed(String id, String taxiId, String speed) {
 
         this.id = id;
+        this.taxiId = taxiId;
+        this.speed = speed;
+    }
+
+    public Speed(String taxiId, String speed) {
+        this.id = UUID.randomUUID().toString();
         this.taxiId = taxiId;
         this.speed = speed;
     }
