@@ -1,5 +1,8 @@
 package entities;
 
+import org.joda.time.DateTime;
+import org.joda.time.DateTimeZone;
+
 import java.io.Serializable;
 import java.util.UUID;
 
@@ -8,11 +11,13 @@ public class Message implements Serializable {
     private String id;
     private String payload;
     private String header;
+    private String processingDuration;
 
     public Message(String id, String header, String payload) {
         this.id = id;
         this.payload = payload;
         this.header = header;
+        this.processingDuration = new DateTime(DateTimeZone.UTC).toString();
     }
 
     public Message() { }
@@ -21,12 +26,14 @@ public class Message implements Serializable {
         this.payload = payload;
         this.header = "initial";
         this.id = UUID.randomUUID().toString();
+        this.processingDuration = new DateTime(DateTimeZone.UTC).toString();
     }
 
     public Message(String header, String payload) {
         this.payload = payload;
         this.header = header;
         this.id = UUID.randomUUID().toString();
+        this.processingDuration = new DateTime(DateTimeZone.UTC).toString();
     }
 
     public String getId() {
@@ -41,12 +48,17 @@ public class Message implements Serializable {
         return header;
     }
 
+    public String getProcessingDuration() {
+        return processingDuration;
+    }
+
     @Override
     public String toString() {
         return "Message{" +
                 "id='" + id + '\'' +
-                ", header='" + header + '\'' +
                 ", payload='" + payload + '\'' +
+                ", header='" + header + '\'' +
+                ", processingDuration='" + processingDuration + '\'' +
                 '}';
     }
 }
