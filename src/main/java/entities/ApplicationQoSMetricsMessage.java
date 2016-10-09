@@ -24,7 +24,7 @@ public class ApplicationQoSMetricsMessage implements Serializable{
     	this.id = UUID.randomUUID().toString();
 		this.applicationName = applicationName;
 		this.averageResponseTime = averageResponseTime;
-        this.timestamp = new DateTime(DateTimeZone.UTC).toString();
+        this.timestamp = Long.toString(System.currentTimeMillis()); //  new DateTime(DateTimeZone.UTC).toString();
 
 	}
 
@@ -33,7 +33,7 @@ public class ApplicationQoSMetricsMessage implements Serializable{
     	this.id = id;
 		this.applicationName = applicationName;
 		this.averageResponseTime = averageResponseTime;
-        this.timestamp = new DateTime(DateTimeZone.UTC).toString();
+        this.timestamp = Long.toString(System.currentTimeMillis()); // new DateTime(DateTimeZone.UTC).toString();
 
 	}
 
