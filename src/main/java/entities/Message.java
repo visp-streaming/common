@@ -36,7 +36,12 @@ public class Message implements Serializable {
         this.processingDuration = new DateTime(DateTimeZone.UTC).toString();
     }
 
-    public String getId() {
+    
+    public void setId(String id) {
+		this.id = id;
+	}
+
+	public String getId() {
         return id;
     }
 
