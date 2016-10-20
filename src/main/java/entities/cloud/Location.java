@@ -1,4 +1,4 @@
-package entities;
+package entities.cloud;
 
 public class Location {
     private String id;

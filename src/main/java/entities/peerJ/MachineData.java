@@ -10,13 +10,13 @@ public class MachineData {
     private Integer producedUnits;
     private Integer defectiveUnits;
     private Integer plannedProductionTime;
-    private Status active;
+    private String active;
     private String timestamp;
 
     public MachineData() {
     }
 
-    public MachineData(String id, String assetID, String machineType, String location, Integer producedUnits, Integer defectiveUnits, Integer plannedProductionTime, Status active, String timestamp) {
+    public MachineData(String id, String assetID, String machineType, String location, Integer producedUnits, Integer defectiveUnits, Integer plannedProductionTime, String active, String timestamp) {
         this.id = id;
         this.assetID = assetID;
         this.machineType = machineType;
@@ -84,11 +84,11 @@ public class MachineData {
         this.plannedProductionTime = plannedProductionTime;
     }
 
-    public Status getActive() {
+    public String getActive() {
         return active;
     }
 
-    public void setActive(Status active) {
+    public void setActive(String active) {
         this.active = active;
     }
 

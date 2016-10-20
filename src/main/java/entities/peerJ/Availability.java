@@ -1,24 +1,24 @@
 package entities.peerJ;
 
 public class Availability {
-    private Status availability;
+    private String availability;
     private String timestamp;
     private String assetID;
 
     public Availability() {
     }
 
-    public Availability(Status availability, String timestamp, String assetID) {
+    public Availability(String availability, String timestamp, String assetID) {
         this.availability = availability;
         this.timestamp = timestamp;
         this.assetID = assetID;
     }
 
-    public Status getAvailability() {
+    public String getAvailability() {
         return availability;
     }
 
-    public void setAvailability(Status availability) {
+    public void setAvailability(String availability) {
         this.availability = availability;
     }
 

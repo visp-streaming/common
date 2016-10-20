@@ -1,17 +1,17 @@
 package entities.peerJ;
 
-public class OOE {
+public class OEEAvailability {
     private String assetID;
     private String timeStamp;
-    private String ooe;
+    private String availability;
 
-    public OOE() {
+    public OEEAvailability() {
     }
 
-    public OOE(String assetID, String timeStamp, String ooe) {
+    public OEEAvailability(String assetID, String timeStamp, String availability) {
         this.assetID = assetID;
         this.timeStamp = timeStamp;
-        this.ooe = ooe;
+        this.availability = availability;
     }
 
     public String getAssetID() {
@@ -30,11 +30,11 @@ public class OOE {
         this.timeStamp = timeStamp;
     }
 
-    public String getOoe() {
-        return ooe;
+    public String getAvailability() {
+        return availability;
     }
 
-    public void setOoe(String ooe) {
-        this.ooe = ooe;
+    public void setAvailability(String availability) {
+        this.availability = availability;
     }
 }

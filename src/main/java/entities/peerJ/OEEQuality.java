@@ -1,14 +1,14 @@
 package entities.peerJ;
 
-public class OOEQuality {
+public class OEEQuality {
     private String assetID;
     private String timeStamp;
     private String quality;
 
-    public OOEQuality() {
+    public OEEQuality() {
     }
 
-    public OOEQuality(String assetID, String timeStamp, String quality) {
+    public OEEQuality(String assetID, String timeStamp, String quality) {
         this.assetID = assetID;
         this.timeStamp = timeStamp;
         this.quality = quality;

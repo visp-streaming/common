@@ -1,4 +1,4 @@
-package entities;
+package entities.cloud;
 
 import java.util.UUID;
 
