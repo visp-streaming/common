@@ -5,17 +5,52 @@ import java.util.ArrayList;
 import java.util.List;
 
 public abstract class Operator {
+
+    public enum Size {
+        SMALL, MEDIUM, LARGE
+    }
+
+    public static class Location {
+        String ipAddress;
+        String resourcePool;
+
+        public Location(String ipAddress, String resourcePool) {
+            this.ipAddress = ipAddress;
+            this.resourcePool = resourcePool;
+        }
+
+        public Location() {
+
+        }
+
+        public String getIpAddress() {
+            return ipAddress;
+        }
+
+        public void setIpAddress(String ipAddress) {
+            this.ipAddress = ipAddress;
+        }
+
+        public String getResourcePool() {
+            return resourcePool;
+        }
+
+        public void setResourcePool(String resourcePool) {
+            this.resourcePool = resourcePool;
+        }
+    }
+
     protected String name;
     protected String type;
     protected List<Operator> sources = new ArrayList<>();
     protected List<Operator> affectedInstances = new ArrayList<>();
     protected List<String> sourcesText = new ArrayList<>();
-    protected String allowedLocations;
-    protected List<String> allowedLocationsList;
+    @Deprecated protected String allowedLocations;
+    protected List<Location> allowedLocationsList;
     protected List<String> inputFormat;
     protected String outputFormat;
-
-    protected String concreteLocation; // the actual concreteLocation, as decided by random assignment amongst all allowed ones
+    protected Size size;
+    protected Location concreteLocation; // the actual concreteLocation, as decided by random assignment amongst all allowed ones
     protected boolean stateful; // whether operator has stateful behavior
 
     public boolean isStateful() {
@@ -28,19 +63,19 @@ public abstract class Operator {
 
     private String messageBrokerHost;
 
-    public List<String> getAllowedLocationsList() {
+    public List<Location> getAllowedLocationsList() {
         return allowedLocationsList;
     }
 
-    public String getConcreteLocation() {
+    public Location getConcreteLocation() {
         return concreteLocation;
     }
 
-    public void setConcreteLocation(String concreteLocation) {
+    public void setConcreteLocation(Location concreteLocation) {
         this.concreteLocation = concreteLocation;
     }
 
-    public void setAllowedLocationsList(List<String> allowedLocationsList) {
+    public void setAllowedLocationsList(List<Location> allowedLocationsList) {
         this.allowedLocationsList = allowedLocationsList;
     }
 
@@ -68,10 +103,12 @@ public abstract class Operator {
         this.sources = sources;
     }
 
+    @Deprecated
     public String getAllowedLocations() {
         return allowedLocations;
     }
 
+    @Deprecated
     public void setAllowedLocations(String allowedLocations) {
         this.allowedLocations = allowedLocations;
     }
@@ -114,6 +151,14 @@ public abstract class Operator {
 
     public void setAffectedInstances(List<Operator> affectedInstances) {
         this.affectedInstances = affectedInstances;
+    }
+
+    public Size getSize() {
+        return size;
+    }
+
+    public void setSize(Size size) {
+        this.size = size;
     }
 
     @Override

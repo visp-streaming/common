@@ -4,8 +4,8 @@ public class ExternalService extends Operator {
     private String location;
 
 
-    public String getConcreteLocation() {
-        return location;
+    public Location getConcreteLocation() {
+        return new Location(location, null);
     }
 
     public void setConcreteLocation(String concreteLocation) {
