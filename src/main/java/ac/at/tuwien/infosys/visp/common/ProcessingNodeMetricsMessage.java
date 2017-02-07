@@ -1,11 +1,11 @@
-package entities;
+package ac.at.tuwien.infosys.visp.common;
+
+import org.joda.time.DateTime;
+import org.joda.time.DateTimeZone;
 
 import java.io.Serializable;
 import java.util.Map;
 import java.util.UUID;
-
-import org.joda.time.DateTime;
-import org.joda.time.DateTimeZone;
 
 public class ProcessingNodeMetricsMessage implements Serializable{
 

@@ -1,4 +1,4 @@
-package entities.operators;
+package ac.at.tuwien.infosys.visp.common.operators;
 
 
 import java.util.ArrayList;

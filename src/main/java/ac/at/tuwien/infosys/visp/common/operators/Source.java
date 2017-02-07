@@ -1,4 +1,4 @@
-package entities.operators;
+package ac.at.tuwien.infosys.visp.common.operators;
 
 public class Source extends Operator {
     private String source;

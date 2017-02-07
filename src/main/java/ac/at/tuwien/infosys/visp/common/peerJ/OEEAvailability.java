@@ -1,4 +1,4 @@
-package entities.peerJ;
+package ac.at.tuwien.infosys.visp.common.peerJ;
 
 public class OEEAvailability {
     private String assetID;

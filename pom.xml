@@ -4,8 +4,8 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>ac.at.tuwien.infosys</groupId>
-    <artifactId>vispCommonData</artifactId>
+    <groupId>ac.at.tuwien.infosys.visp</groupId>
+    <artifactId>common</artifactId>
     <version>0.1</version>
 
     <dependencies>
@@ -26,17 +26,6 @@
                     <target>1.7</target>
                 </configuration>
             </plugin>
-                <plugin>
-                    <groupId>org.apache.maven.plugins</groupId>
-                    <artifactId>maven-jar-plugin</artifactId>
-                    <version>2.3.2</version>
-                </plugin>
-                <plugin>
-                    <groupId>org.apache.maven.plugins</groupId>
-                    <artifactId>maven-source-plugin</artifactId>
-                    <version>2.1.2</version>
-                </plugin>
-
         </plugins>
     </build>
 
@@ -44,7 +33,7 @@
         <repository>
             <id>bintray-chochreiner-VISP</id>
             <name>chochreiner-VISP</name>
-            <url>https://api.bintray.com/maven/chochreiner/VISP/VISP-Datamodel/;publish=1</url>
+            <url>https://api.bintray.com/maven/chochreiner/VISP/common/;publish=1</url>
         </repository>
     </distributionManagement>
 
