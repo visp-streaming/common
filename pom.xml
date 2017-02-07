@@ -6,7 +6,7 @@
 
     <groupId>ac.at.tuwien.infosys</groupId>
     <artifactId>vispCommonData</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>0.1</version>
 
     <dependencies>
         <dependency>
@@ -26,7 +26,26 @@
                     <target>1.7</target>
                 </configuration>
             </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-jar-plugin</artifactId>
+                    <version>2.3.2</version>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-source-plugin</artifactId>
+                    <version>2.1.2</version>
+                </plugin>
+
         </plugins>
     </build>
+
+    <distributionManagement>
+        <repository>
+            <id>bintray-chochreiner-VISP</id>
+            <name>chochreiner-VISP</name>
+            <url>https://api.bintray.com/maven/chochreiner/VISP/VISP-Datamodel/;publish=1</url>
+        </repository>
+    </distributionManagement>
 
 </project>
