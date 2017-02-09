@@ -7,7 +7,7 @@ import java.util.List;
 public abstract class Operator {
 
     public enum Size {
-        SMALL, MEDIUM, LARGE
+        SMALL, MEDIUM, UNKNOWN, LARGE
     }
 
     public static class Location {
@@ -37,6 +37,24 @@ public abstract class Operator {
 
         public void setResourcePool(String resourcePool) {
             this.resourcePool = resourcePool;
+        }
+
+        @Override
+        public boolean equals(Object o) {
+            if (this == o) return true;
+            if (o == null || getClass() != o.getClass()) return false;
+
+            Location location = (Location) o;
+
+            if (ipAddress != null ? !ipAddress.equals(location.ipAddress) : location.ipAddress != null) return false;
+            return resourcePool != null ? resourcePool.equals(location.resourcePool) : location.resourcePool == null;
+        }
+
+        @Override
+        public int hashCode() {
+            int result = ipAddress != null ? ipAddress.hashCode() : 0;
+            result = 31 * result + (resourcePool != null ? resourcePool.hashCode() : 0);
+            return result;
         }
     }
 
@@ -159,6 +177,21 @@ public abstract class Operator {
 
     public void setSize(Size size) {
         this.size = size;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        Operator operator = (Operator) o;
+
+        return name.equals(operator.name);
+    }
+
+    @Override
+    public int hashCode() {
+        return name.hashCode();
     }
 
     @Override

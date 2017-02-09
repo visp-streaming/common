@@ -4,13 +4,10 @@ package ac.at.tuwien.infosys.visp.common.operators;
 import java.util.List;
 
 public class ProcessingOperator extends Operator {
-    @Deprecated
-    private String scalingThreshold;
 
-    private String expectedDuration;
-    private String queueThreshold;
+    protected double expectedDuration, scalingCPUThreshold, scalingMemoryThreshold, queueThreshold;
 
-    private boolean replicationAllowed;
+    private boolean replicationAllowed, pinned;
 
     public boolean isReplicationAllowed() {
         return replicationAllowed;
@@ -30,29 +27,43 @@ public class ProcessingOperator extends Operator {
 
     private List<String> routingKeys;
 
-    @Deprecated
-    public String getScalingThreshold() {
-        return scalingThreshold;
-    }
-
-    @Deprecated
-    public void setScalingThreshold(String scalingThreshold) {
-        this.scalingThreshold = scalingThreshold;
-    }
-
-    public String getExpectedDuration() {
+    public double getExpectedDuration() {
         return expectedDuration;
     }
 
-    public void setExpectedDuration(String expectedDuration) {
+    public void setExpectedDuration(double expectedDuration) {
         this.expectedDuration = expectedDuration;
     }
 
-    public String getQueueThreshold() {
+    public double getScalingCPUThreshold() {
+        return scalingCPUThreshold;
+    }
+
+    public void setScalingCPUThreshold(double scalingCPUThreshold) {
+        this.scalingCPUThreshold = scalingCPUThreshold;
+    }
+
+    public double getScalingMemoryThreshold() {
+        return scalingMemoryThreshold;
+    }
+
+    public void setScalingMemoryThreshold(double scalingMemoryThreshold) {
+        this.scalingMemoryThreshold = scalingMemoryThreshold;
+    }
+
+    public double getQueueThreshold() {
         return queueThreshold;
     }
 
-    public void setQueueThreshold(String queueThreshold) {
+    public void setQueueThreshold(double queueThreshold) {
         this.queueThreshold = queueThreshold;
+    }
+
+    public boolean isPinned() {
+        return pinned;
+    }
+
+    public void setPinned(boolean pinned) {
+        this.pinned = pinned;
     }
 }
