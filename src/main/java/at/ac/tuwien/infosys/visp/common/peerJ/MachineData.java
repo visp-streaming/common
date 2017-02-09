@@ -1,4 +1,4 @@
-package ac.at.tuwien.infosys.visp.common.peerJ;
+package at.ac.tuwien.infosys.visp.common.peerJ;
 
 public class MachineData {
 

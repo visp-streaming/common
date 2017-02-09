@@ -1,25 +1,26 @@
-package ac.at.tuwien.infosys.visp.common.cloud;
+package at.ac.tuwien.infosys.visp.common.cloud;
 
 import java.util.UUID;
 
-public class Distance {
+public class Speed {
     private String id;
     private String taxiId;
-    private String distance;
+    private String speed;
 
-    public Distance() {
+    public Speed() {
     }
 
-    public Distance(String id, String taxiId, String distance) {
+    public Speed(String id, String taxiId, String speed) {
+
         this.id = id;
         this.taxiId = taxiId;
-        this.distance = distance;
+        this.speed = speed;
     }
 
-    public Distance(String taxiId, String distance) {
+    public Speed(String taxiId, String speed) {
         this.id = UUID.randomUUID().toString();
         this.taxiId = taxiId;
-        this.distance = distance;
+        this.speed = speed;
     }
 
     public String getId() {
@@ -38,11 +39,11 @@ public class Distance {
         this.taxiId = taxiId;
     }
 
-    public String getDistance() {
-        return distance;
+    public String getSpeed() {
+        return speed;
     }
 
-    public void setDistance(String distance) {
-        this.distance = distance;
+    public void setSpeed(String speed) {
+        this.speed = speed;
     }
 }

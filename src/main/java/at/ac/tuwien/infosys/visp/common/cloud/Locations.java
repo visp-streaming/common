@@ -1,4 +1,4 @@
-package ac.at.tuwien.infosys.visp.common.cloud;
+package at.ac.tuwien.infosys.visp.common.cloud;
 
 import java.util.List;
 

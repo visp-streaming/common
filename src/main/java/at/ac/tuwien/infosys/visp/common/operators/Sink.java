@@ -1,4 +1,4 @@
-package ac.at.tuwien.infosys.visp.common.operators;
+package at.ac.tuwien.infosys.visp.common.operators;
 
 public class Sink extends Operator {
     private String destination;

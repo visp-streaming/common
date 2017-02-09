@@ -1,4 +1,4 @@
-package ac.at.tuwien.infosys.visp.common.operators;
+package at.ac.tuwien.infosys.visp.common.operators;
 
 public class ExternalService extends Operator {
     private String location;
