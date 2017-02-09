@@ -1,17 +1,17 @@
-package at.ac.tuwien.infosys.visp.common.peerJ;
+package ac.at.tuwien.infosys.visp.common.peerJ;
 
-public class OEEAvailability {
+public class OEEPerformance {
     private String assetID;
     private String timeStamp;
-    private String availability;
+    private String performance;
 
-    public OEEAvailability() {
+    public OEEPerformance() {
     }
 
-    public OEEAvailability(String assetID, String timeStamp, String availability) {
+    public OEEPerformance(String assetID, String timeStamp, String performance) {
         this.assetID = assetID;
         this.timeStamp = timeStamp;
-        this.availability = availability;
+        this.performance = performance;
     }
 
     public String getAssetID() {
@@ -30,11 +30,11 @@ public class OEEAvailability {
         this.timeStamp = timeStamp;
     }
 
-    public String getAvailability() {
-        return availability;
+    public String getPerformance() {
+        return performance;
     }
 
-    public void setAvailability(String availability) {
-        this.availability = availability;
+    public void setPerformance(String performance) {
+        this.performance = performance;
     }
 }

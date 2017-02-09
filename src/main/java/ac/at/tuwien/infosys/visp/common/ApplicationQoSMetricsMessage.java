@@ -1,4 +1,4 @@
-package at.ac.tuwien.infosys.visp.common;
+package ac.at.tuwien.infosys.visp.common;
 
 import java.io.Serializable;
 import java.util.UUID;

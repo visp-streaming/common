@@ -1,4 +1,4 @@
-package at.ac.tuwien.infosys.visp.common.operators;
+package ac.at.tuwien.infosys.visp.common.operators;
 
 
 import java.util.List;

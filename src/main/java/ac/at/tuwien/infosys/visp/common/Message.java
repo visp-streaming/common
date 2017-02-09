@@ -1,4 +1,4 @@
-package at.ac.tuwien.infosys.visp.common;
+package ac.at.tuwien.infosys.visp.common;
 
 import org.joda.time.DateTime;
 import org.joda.time.DateTimeZone;

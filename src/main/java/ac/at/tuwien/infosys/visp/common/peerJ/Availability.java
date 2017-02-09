@@ -1,25 +1,25 @@
-package at.ac.tuwien.infosys.visp.common.peerJ;
+package ac.at.tuwien.infosys.visp.common.peerJ;
 
-public class Temperature {
-    private Integer temperature;
+public class Availability {
+    private String availability;
     private String timestamp;
     private String assetID;
 
-    public Temperature() {
+    public Availability() {
     }
 
-    public Temperature(Integer temperature, String timestamp, String assetID) {
-        this.temperature = temperature;
+    public Availability(String availability, String timestamp, String assetID) {
+        this.availability = availability;
         this.timestamp = timestamp;
         this.assetID = assetID;
     }
 
-    public Integer getTemperature() {
-        return temperature;
+    public String getAvailability() {
+        return availability;
     }
 
-    public void setTemperature(Integer temperature) {
-        this.temperature = temperature;
+    public void setAvailability(String availability) {
+        this.availability = availability;
     }
 
     public String getTimestamp() {

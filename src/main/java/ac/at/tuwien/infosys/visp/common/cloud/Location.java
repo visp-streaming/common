@@ -1,4 +1,4 @@
-package at.ac.tuwien.infosys.visp.common.cloud;
+package ac.at.tuwien.infosys.visp.common.cloud;
 
 public class Location {
     private String id;
