@@ -29,12 +29,12 @@
         </plugins>
     </build>
 
-    <distributionManagement>
+    <repositories>
         <repository>
-            <id>bintray-chochreiner-VISP</id>
-            <name>chochreiner-VISP</name>
-            <url>https://api.bintray.com/maven/chochreiner/VISP/common/;publish=1</url>
+            <id>central</id>
+            <name>infosys-maven-releases</name>
+            <url>http://lilith.infosys.tuwien.ac.at:8081/artifactory/libs-release-local</url>
         </repository>
-    </distributionManagement>
+    </repositories>
 
 </project>
