@@ -40,6 +40,11 @@ public abstract class Operator {
         }
 
         @Override
+        public String toString() {
+            return ipAddress+"/"+resourcePool;
+        }
+
+        @Override
         public boolean equals(Object o) {
             if (this == o) return true;
             if (o == null || getClass() != o.getClass()) return false;
