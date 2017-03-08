@@ -8,6 +8,10 @@
     <artifactId>common</artifactId>
     <version>0.2-SNAPSHOT</version>
 
+    <properties>
+        <lombok.version>1.16.14</lombok.version>
+    </properties>
+
     <dependencies>
         <dependency>
             <groupId>joda-time</groupId>
