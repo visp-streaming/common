@@ -3,18 +3,13 @@ package ac.at.tuwien.infosys.visp.common.resources;
 public class ResourcePoolUsage {
 
     private String name;
-
     private Double cost;
     private Integer cpuFrequency;
-    private Boolean availability;
+    private Double availability;
     private ResourceTriple overallResources;
 
     private ResourceTriple plannedResources;
     private ResourceTriple actualResources;
-
-    public ResourcePoolUsage() {
-        this.availability = true;
-    }
 
     public ResourcePoolUsage(String name) {
         this.name = name;
@@ -44,11 +39,11 @@ public class ResourcePoolUsage {
         this.cpuFrequency = cpuFrequency;
     }
 
-    public Boolean getAvailability() {
+    public Double getAvailability() {
         return availability;
     }
 
-    public void setAvailability(Boolean availability) {
+    public void setAvailability(Double availability) {
         this.availability = availability;
     }
 
