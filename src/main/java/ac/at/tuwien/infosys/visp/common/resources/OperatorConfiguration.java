@@ -1,6 +1,4 @@
-package ac.at.tuwien.infosys.visp.common.operators;
-
-import ac.at.tuwien.infosys.visp.common.resources.ResourceTriple;
+package ac.at.tuwien.infosys.visp.common.resources;
 
 public class OperatorConfiguration {
 
@@ -10,15 +8,9 @@ public class OperatorConfiguration {
     private ResourceTriple plannedResources;
     private ResourceTriple actualResources;
 
-    //TODO add more information from the topology
-
-    public OperatorConfiguration(String name) {
+    public OperatorConfiguration(String name, Integer frequency) {
         this.name = name;
-        //TODO make this dynamic
-        this.frequency = 2400;
-    }
-
-    public OperatorConfiguration() {
+        this.frequency = frequency;
     }
 
     public String getName() {
