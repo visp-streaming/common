@@ -6,6 +6,9 @@ import java.util.List;
 
 public abstract class Operator {
 
+    public Operator() {
+    }
+
     public enum Size {
         SMALL, MEDIUM, UNKNOWN, LARGE
     }

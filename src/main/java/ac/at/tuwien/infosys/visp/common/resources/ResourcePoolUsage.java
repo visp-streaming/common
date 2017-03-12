@@ -11,6 +11,9 @@ public class ResourcePoolUsage {
     private ResourceTriple plannedResources;
     private ResourceTriple actualResources;
 
+    public ResourcePoolUsage() {
+    }
+
     public ResourcePoolUsage(String name) {
         this.name = name;
     }
