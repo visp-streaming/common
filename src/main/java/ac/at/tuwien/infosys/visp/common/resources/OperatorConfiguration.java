@@ -4,9 +4,11 @@ public class OperatorConfiguration {
 
     private String name;
     private Integer frequency;
-
     private ResourceTriple plannedResources;
     private ResourceTriple actualResources;
+
+    public OperatorConfiguration() {
+    }
 
     public OperatorConfiguration(String name, Integer frequency) {
         this.name = name;
