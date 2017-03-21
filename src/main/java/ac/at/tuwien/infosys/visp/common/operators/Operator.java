@@ -71,7 +71,6 @@ public abstract class Operator {
     protected List<Operator> sources = new ArrayList<>();
     protected List<Operator> affectedInstances = new ArrayList<>();
     protected List<String> sourcesText = new ArrayList<>();
-    @Deprecated protected String allowedLocations;
     protected List<Location> allowedLocationsList;
     protected List<String> inputFormat;
     protected String outputFormat;
@@ -127,16 +126,6 @@ public abstract class Operator {
 
     public void setSources(List<Operator> sources) {
         this.sources = sources;
-    }
-
-    @Deprecated
-    public String getAllowedLocations() {
-        return allowedLocations;
-    }
-
-    @Deprecated
-    public void setAllowedLocations(String allowedLocations) {
-        this.allowedLocations = allowedLocations;
     }
 
     public List<String> getInputFormat() {
@@ -210,7 +199,7 @@ public abstract class Operator {
                 ", sources=" + sources +
                 ", affectedInstances=" + affectedInstances +
                 ", sourcesText=" + sourcesText +
-                ", allowedLocations='" + allowedLocations + '\'' +
+                ", allowedLocations='" + allowedLocationsList + '\'' +
                 ", inputFormat='" + inputFormat + '\'' +
                 ", outputFormat='" + outputFormat + '\'' +
                 ", messageBrokerHost='" + messageBrokerHost + '\'' +
