@@ -17,6 +17,7 @@ public class ResourceTriple {
         this.storage = storage;
     }
 
+
     public Double getCores() {
         return cores;
     }
@@ -53,27 +54,38 @@ public class ResourceTriple {
         this.storage += storage;
     }
 
-    public void decrementCores(Double cores) throws Exception {
+    public void decrementCores(Double cores)  {
         this.cores -= cores;
-        if (this.cores <= 0){
-            throw new Exception("Too little cpu cores.");
+        if (this.cores < 0){
+            System.out.println("Too little cpu cores.");
         }
     }
 
-    public void decrementMemory(Integer memory) throws Exception {
+    public void decrementMemory(Integer memory)  {
         this.memory -= memory;
-        if (this.memory <= 0){
-            throw new Exception("Too little memory.");
+        if (this.memory < 0){
+            System.out.println("Too little cpu cores.");
         }
     }
 
-    public void decrementStorage(Float storage) throws Exception {
+    public void decrementStorage(Float storage)  {
         this.storage -= storage;
-        if (this.storage <= 0){
-            throw new Exception("Too little storage.");
+        if (this.storage < 0){
+            System.out.println("Too little cpu cores.");
         }
     }
 
+    public void increment(Double cores, Integer memory, Float storage) {
+        incrementCores(cores);
+        incrementMemory(memory);
+        incrementStorage(storage);
+    }
+
+    public void decrement(Double cores, Integer memory, Float storage) {
+        decrementCores(cores);
+        decrementMemory(memory);
+        decrementStorage(storage);
+    }
 
     public void divideForMultipleRecordings(Integer counter) {
         this.cores = cores / counter;
