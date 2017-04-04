@@ -4,6 +4,8 @@ public class OperatorConfiguration {
 
     private String name;
     private Integer frequency;
+    private Double expectedDuration;
+    private Double actualDuration;
     private ResourceTriple plannedResources;
     private ResourceTriple actualResources;
 
@@ -45,5 +47,21 @@ public class OperatorConfiguration {
 
     public void setActualResources(ResourceTriple actualResources) {
         this.actualResources = actualResources;
+    }
+
+    public Double getExpectedDuration() {
+        return expectedDuration;
+    }
+
+    public void setExpectedDuration(Double expectedDuration) {
+        this.expectedDuration = expectedDuration;
+    }
+
+    public Double getActualDuration() {
+        return actualDuration;
+    }
+
+    public void setActualDuration(Double actualDuration) {
+        this.actualDuration = actualDuration;
     }
 }
