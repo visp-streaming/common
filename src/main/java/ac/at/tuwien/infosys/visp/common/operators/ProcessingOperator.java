@@ -9,6 +9,8 @@ public class ProcessingOperator extends Operator {
 
     private boolean replicationAllowed, pinned;
 
+    private String compensation;
+
     public boolean isReplicationAllowed() {
         return replicationAllowed;
     }
@@ -65,5 +67,13 @@ public class ProcessingOperator extends Operator {
 
     public void setPinned(boolean pinned) {
         this.pinned = pinned;
+    }
+
+    public String getCompensation() {
+        return compensation;
+    }
+
+    public void setCompensation(String compensation) {
+        this.compensation = compensation;
     }
 }
