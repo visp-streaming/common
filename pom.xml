@@ -9,7 +9,7 @@
     <version>0.2-SNAPSHOT</version>
 
     <properties>
-        <joda.version>2.9.4</joda.version>
+        <joda.version>2.9.9</joda.version>
     </properties>
 
     <dependencies>
