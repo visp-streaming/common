@@ -6,10 +6,10 @@ import java.util.List;
 public class ProcessingOperator extends Operator {
 
     protected double expectedDuration, scalingCPUThreshold, scalingMemoryThreshold, queueThreshold;
-
     private boolean replicationAllowed, pinned;
-
     private String compensation;
+    private List<String> routingKeys;
+
 
     public boolean isReplicationAllowed() {
         return replicationAllowed;
@@ -26,8 +26,6 @@ public class ProcessingOperator extends Operator {
     public void setRoutingKeys(List<String> routingKeys) {
         this.routingKeys = routingKeys;
     }
-
-    private List<String> routingKeys;
 
     public double getExpectedDuration() {
         return expectedDuration;

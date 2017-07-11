@@ -6,6 +6,20 @@ import java.util.List;
 
 public abstract class Operator {
 
+    protected String name;
+    protected String type;
+    protected List<Operator> sources = new ArrayList<>();
+    protected List<Operator> affectedInstances = new ArrayList<>();
+    protected List<String> sourcesText = new ArrayList<>();
+    protected List<Location> allowedLocationsList;
+    protected List<String> inputFormat;
+    protected String outputFormat;
+    protected Size size;
+    protected Location concreteLocation; // the actual concreteLocation, as decided by random assignment amongst all allowed ones
+    protected boolean stateful; // whether operator has stateful behavior
+    private String messageBrokerHost;
+
+
     public Operator() {
     }
 
@@ -14,8 +28,8 @@ public abstract class Operator {
     }
 
     public static class Location {
-        String ipAddress;
-        String resourcePool;
+        private String ipAddress;
+        private String resourcePool;
 
         public Location(String ipAddress, String resourcePool) {
             this.ipAddress = ipAddress;
@@ -66,18 +80,6 @@ public abstract class Operator {
         }
     }
 
-    protected String name;
-    protected String type;
-    protected List<Operator> sources = new ArrayList<>();
-    protected List<Operator> affectedInstances = new ArrayList<>();
-    protected List<String> sourcesText = new ArrayList<>();
-    protected List<Location> allowedLocationsList;
-    protected List<String> inputFormat;
-    protected String outputFormat;
-    protected Size size;
-    protected Location concreteLocation; // the actual concreteLocation, as decided by random assignment amongst all allowed ones
-    protected boolean stateful; // whether operator has stateful behavior
-
     public boolean isStateful() {
         return stateful;
     }
@@ -85,8 +87,6 @@ public abstract class Operator {
     public void setStateful(boolean stateful) {
         this.stateful = stateful;
     }
-
-    private String messageBrokerHost;
 
     public List<Location> getAllowedLocationsList() {
         return allowedLocationsList;
