@@ -4,13 +4,13 @@
 
     <groupId>ac.at.tuwien.infosys.visp</groupId>
     <artifactId>common</artifactId>
-    <version>0.2</version>
+    <version>0.3-SNAPSHOT</version>
 
     <scm>
         <connection>scm:git:https://github.com/visp-streaming/common</connection>
         <developerConnection>scm:git:git@github.com:visp-streaming/common</developerConnection>
         <url>https://github.com/visp-streaming/common</url>
-      <tag>common-0.2</tag>
+      <tag>HEAD</tag>
   </scm>
 
     <properties>
