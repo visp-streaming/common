@@ -8,8 +8,16 @@
     <artifactId>common</artifactId>
     <version>0.2-SNAPSHOT</version>
 
+    <scm>
+        <connection>scm:git:https://github.com/visp-streaming/common</connection>
+        <developerConnection>scm:git:git@github.com:visp-streaming/common</developerConnection>
+        <url>https://github.com/visp-streaming/common</url>
+    </scm>
+
     <properties>
         <joda.version>2.9.9</joda.version>
+        <maven.compiler.plugin.version>3.6.1</maven.compiler.plugin.version>
+        <maven.release.plugin.version>2.5.3</maven.release.plugin.version>
     </properties>
 
     <dependencies>
@@ -24,11 +32,16 @@
         <plugins>
             <plugin>
                 <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.6.1</version>
+                <version>${maven.compiler.plugin.version}</version>
                 <configuration>
                     <source>1.8</source>
                     <target>1.8</target>
                 </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-release-plugin</artifactId>
+                <version>${maven.release.plugin.version}</version>
             </plugin>
         </plugins>
     </build>
