@@ -10,8 +10,15 @@
         <connection>scm:git:https://github.com/visp-streaming/common</connection>
         <developerConnection>scm:git:git@github.com:visp-streaming/common</developerConnection>
         <url>https://github.com/visp-streaming/common</url>
-      <tag>HEAD</tag>
-  </scm>
+        <tag>HEAD</tag>
+    </scm>
+
+    <distributionManagement>
+        <repository>
+            <id>bintray</id>
+            <url>https://api.bintray.com/maven/chochreiner/visp/common/;publish=1</url>
+        </repository>
+    </distributionManagement>
 
     <properties>
         <joda.version>2.9.9</joda.version>
@@ -47,6 +54,17 @@
 
     <repositories>
         <repository>
+            <id>bintray</id>
+            <url>http://dl.bintray.com/chochreiner/visp</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </repository>
+        <!-- TODO remove infosys repositories as soon as bintray proves to be reliable -->
+        <repository>
             <id>infosys</id>
             <name>infosys-maven-releases</name>
             <url>https://repo.infosys.tuwien.ac.at/artifactory/libs-release</url>
@@ -55,7 +73,7 @@
             <id>infosys-snapshots</id>
             <name>infosys-maven-snapshots</name>
             <url>https://repo.infosys.tuwien.ac.at/artifactory/libs-snapshot</url>
-        </repository>          
+        </repository>
     </repositories>
 
 </project>
