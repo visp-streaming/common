@@ -10,37 +10,40 @@ public class Message implements Serializable {
 
     private String id;
     private String payload;
-    private String header;
+    private String operatorType;
+    private String operatorName;
+    private String containerID;
     private String processingDuration;
-    private String containerid;
 
-    public Message(String id, String header, String payload, String containerid) {
+    public Message(String id, String operatorType, String operatorName, String containerID, String payload) {
         this.id = id;
         this.payload = payload;
-        this.header = header;
+        this.operatorType = operatorType;
+        this.operatorName = operatorName;
+        this.containerID = containerID;
         this.processingDuration = new DateTime(DateTimeZone.UTC).toString();
-        this.containerid = containerid;
     }
 
     public Message() { }
 
-    public Message(String payload, String containerid) {
+    public Message(String payload) {
         this.payload = payload;
-        this.header = "initial";
+        this.operatorType = "initial";
+        this.operatorName = "initial";
+        this.containerID = "initial";
         this.id = UUID.randomUUID().toString();
         this.processingDuration = new DateTime(DateTimeZone.UTC).toString();
-        this.containerid = containerid;
     }
 
-    public Message(String header, String payload, String containerid) {
-        this.payload = payload;
-        this.header = header;
+    public Message(String operatorType, String operatorName, String containerID, String payload) {
         this.id = UUID.randomUUID().toString();
+        this.payload = payload;
+        this.operatorType = operatorType;
+        this.operatorName = operatorName;
+        this.containerID = containerID;
         this.processingDuration = new DateTime(DateTimeZone.UTC).toString();
-        this.containerid = containerid;
     }
 
-    
     public void setId(String id) {
 		this.id = id;
 	}
@@ -53,16 +56,20 @@ public class Message implements Serializable {
         return payload;
     }
 
-    public String getHeader() {
-        return header;
-    }
-
     public String getProcessingDuration() {
         return processingDuration;
     }
 
-    public String getContainerid() {
-        return containerid;
+    public String getOperatorType() {
+        return operatorType;
+    }
+
+    public String getOperatorName() {
+        return operatorName;
+    }
+
+    public String getContainerID() {
+        return containerID;
     }
 
     @Override
@@ -70,9 +77,10 @@ public class Message implements Serializable {
         return "Message{" +
                 "id='" + id + '\'' +
                 ", payload='" + payload + '\'' +
-                ", header='" + header + '\'' +
+                ", operatortype='" + operatorType + '\'' +
+                ", operatorname='" + operatorName + '\'' +
+                ", containerid='" + containerID + '\'' +
                 ", processingDuration='" + processingDuration + '\'' +
-                ", containerid='" + containerid + '\'' +
                 '}';
     }
 }

@@ -6,6 +6,10 @@ public class OperatorConfiguration {
     private Integer frequency;
     private Double expectedDuration;
     private Double actualDuration;
+    private Integer itemsWaiting;
+    private Double incomingRate;
+    private Double networkUpload;
+    private Double networkDownload;
     private ResourceTriple plannedResources;
     private ResourceTriple actualResources;
 
@@ -63,5 +67,37 @@ public class OperatorConfiguration {
 
     public void setActualDuration(Double actualDuration) {
         this.actualDuration = actualDuration;
+    }
+
+    public Integer getItemsWaiting() {
+        return itemsWaiting;
+    }
+
+    public void setItemsWaiting(Integer itemsWaiting) {
+        this.itemsWaiting = itemsWaiting;
+    }
+
+    public Double getIncomingRate() {
+        return incomingRate;
+    }
+
+    public void setIncomingRate(Double incomingRate) {
+        this.incomingRate = incomingRate;
+    }
+
+    public Double getNetworkUpload() {
+        return networkUpload;
+    }
+
+    public void setNetworkUpload(Double networkUpload) {
+        this.networkUpload = networkUpload;
+    }
+
+    public Double getNetworkDownload() {
+        return networkDownload;
+    }
+
+    public void setNetworkDownload(Double networkDownload) {
+        this.networkDownload = networkDownload;
     }
 }
