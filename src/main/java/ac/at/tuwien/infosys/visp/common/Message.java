@@ -12,28 +12,32 @@ public class Message implements Serializable {
     private String payload;
     private String header;
     private String processingDuration;
+    private String containerid;
 
-    public Message(String id, String header, String payload) {
+    public Message(String id, String header, String payload, String containerid) {
         this.id = id;
         this.payload = payload;
         this.header = header;
         this.processingDuration = new DateTime(DateTimeZone.UTC).toString();
+        this.containerid = containerid;
     }
 
     public Message() { }
 
-    public Message(String payload) {
+    public Message(String payload, String containerid) {
         this.payload = payload;
         this.header = "initial";
         this.id = UUID.randomUUID().toString();
         this.processingDuration = new DateTime(DateTimeZone.UTC).toString();
+        this.containerid = containerid;
     }
 
-    public Message(String header, String payload) {
+    public Message(String header, String payload, String containerid) {
         this.payload = payload;
         this.header = header;
         this.id = UUID.randomUUID().toString();
         this.processingDuration = new DateTime(DateTimeZone.UTC).toString();
+        this.containerid = containerid;
     }
 
     
@@ -57,6 +61,10 @@ public class Message implements Serializable {
         return processingDuration;
     }
 
+    public String getContainerid() {
+        return containerid;
+    }
+
     @Override
     public String toString() {
         return "Message{" +
@@ -64,6 +72,7 @@ public class Message implements Serializable {
                 ", payload='" + payload + '\'' +
                 ", header='" + header + '\'' +
                 ", processingDuration='" + processingDuration + '\'' +
+                ", containerid='" + containerid + '\'' +
                 '}';
     }
 }
