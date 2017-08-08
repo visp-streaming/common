@@ -8,6 +8,7 @@ public class OperatorConfiguration {
     private Double actualDuration;
     private Integer itemsWaiting;
     private Double incomingRate;
+    private Double deliveryRate;
     private Double networkUpload;
     private Double networkDownload;
     private ResourceTriple plannedResources;
@@ -99,5 +100,13 @@ public class OperatorConfiguration {
 
     public void setNetworkDownload(Double networkDownload) {
         this.networkDownload = networkDownload;
+    }
+
+    public Double getDeliveryRate() {
+        return deliveryRate;
+    }
+
+    public void setDeliveryRate(Double deliveryRate) {
+        this.deliveryRate = deliveryRate;
     }
 }
