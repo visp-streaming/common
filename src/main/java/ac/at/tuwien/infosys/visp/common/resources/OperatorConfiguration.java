@@ -3,6 +3,7 @@ package ac.at.tuwien.infosys.visp.common.resources;
 public class OperatorConfiguration {
 
     private String name;
+    private Integer instances;
     private Integer frequency;
     private Double expectedDuration;
     private Double actualDuration;
@@ -28,6 +29,14 @@ public class OperatorConfiguration {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public Integer getInstances() {
+        return instances;
+    }
+
+    public void setInstances(Integer instances) {
+        this.instances = instances;
     }
 
     public Integer getFrequency() {
